@@ -5,3 +5,10 @@
 .zen_maru_gothic {
   font-family: 'Zen Maru Gothic' sans-serif !important;
 }
+
+@theme {
+  --color-primary-main: #0065D4;
+  --color-primary-sub: #002F82;
+  --color-primary-light: #DFE9EF;
+  --color-primary-accent: #00A3D9;
+}
