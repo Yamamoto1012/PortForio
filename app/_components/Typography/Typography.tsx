@@ -19,20 +19,20 @@ type TypographyProps = {
   color?: string;
   className?: string;
   href?: string;
-}
+};
 
 const fontSizeMap: Record<TypographyVariant, string> = {
-  hero: '52px',
-  title: '48px',
-  section: '40px',
-  button: '32px',
-  profile: '24px',
-  contact: '18px',
-  link: '16px',
-  caption: '14px',
-  card: '12px',
-  appTag: '11px'
-}
+  hero: "52px",
+  title: "48px",
+  section: "40px",
+  button: "32px",
+  profile: "24px",
+  contact: "18px",
+  link: "16px",
+  caption: "14px",
+  card: "12px",
+  appTag: "11px",
+};
 
 export const Typography: React.FC<TypographyProps> = ({
   text,
@@ -40,13 +40,13 @@ export const Typography: React.FC<TypographyProps> = ({
   bold = false,
   color = "inherit",
   className = "",
-  href
+  href,
 }) => {
   const style = {
     fontSize: fontSizeMap[variant],
     fontWeight: bold ? "bold" : "normal",
-    color
-  }
+    color,
+  };
 
   // リンクが存在する場合
   if (href) {
@@ -54,11 +54,11 @@ export const Typography: React.FC<TypographyProps> = ({
       <Link href={href} className={className} style={style}>
         {text}
       </Link>
-    )
+    );
   }
   return (
     <p className={className} style={style}>
       {text}
     </p>
-  )
-}
+  );
+};
