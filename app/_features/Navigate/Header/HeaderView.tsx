@@ -4,19 +4,20 @@ import Image from "next/image";
 import { Typography } from "@/app/_components/Typography/Typography";
 import Logo from "@/public/Logo.png";
 import { HEADER_LINK } from "./constants";
-import { HamburgerIcon } from "./components/HambugerIcon";
 import { MobileMenu } from "./components/MobileMenu";
 
 type HeaderViewProps = {
   isMenuOpen: boolean;
   currentPathname: string;
   onToggleMenu: () => void;
+  menuIcon: React.ReactNode
 };
 
 export const HeaderView: React.FC<HeaderViewProps> = ({
   isMenuOpen,
   currentPathname,
   onToggleMenu,
+  menuIcon
 }) => {
   const headerContainerClass = "bg-white py-4 rounded-full shadow-2x";
   const linkContainerClass = "flex space-x-8";
@@ -62,9 +63,9 @@ export const HeaderView: React.FC<HeaderViewProps> = ({
           </ul>
         </nav>
 
-        <div className="xl:hidden">
+        <div className="z-50 xl:hidden">
           <button onClick={onToggleMenu}>
-            <HamburgerIcon />
+            {menuIcon}
           </button>
         </div>
 

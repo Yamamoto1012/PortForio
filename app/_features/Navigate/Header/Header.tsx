@@ -3,6 +3,8 @@
 import React, { useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { HeaderView } from "./HeaderView";
+import { CloseIcon } from "./components/CloseIcon";
+import { HamburgerIcon } from "./components/HambugerIcon";
 
 export const Header = () => {
   // ページのパス管理
@@ -16,11 +18,14 @@ export const Header = () => {
     setIsMenuOpen((prev) => !prev);
   }, []);
 
+  const menuIcon = isMenuOpen ? <CloseIcon/> : <HamburgerIcon />
+
   return (
     <HeaderView
       isMenuOpen={isMenuOpen}
       currentPathname={currentPathname}
       onToggleMenu={handleToggleMenu}
+      menuIcon={menuIcon}
     />
   );
 };
