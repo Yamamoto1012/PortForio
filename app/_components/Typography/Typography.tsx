@@ -12,10 +12,17 @@ type TypographyVariant =
   | "card"
   | "appTag";
 
+type TypographyBold =
+  | "black"
+  | "bold"
+  | "medium"
+  | "regular"
+  | "light"
+
 type TypographyProps = {
   text: string;
   variant?: TypographyVariant;
-  bold?: boolean;
+  bold?: TypographyBold;
   color?: string;
   className?: string;
   href?: string;
@@ -34,17 +41,25 @@ const fontSizeMap: Record<TypographyVariant, string> = {
   appTag: "11px",
 };
 
+const fontBoldMap: Record<TypographyBold, string> = {
+  black: "font-black",
+  bold: "font-bold",
+  medium: "font-medium",
+  regular: "font-regular",
+  light: "font-light"
+}
+
 export const Typography: React.FC<TypographyProps> = ({
   text,
   variant = "caption",
-  bold = false,
+  bold = "medium",
   color = "inherit",
   className = "",
   href,
 }) => {
   const style = {
     fontSize: fontSizeMap[variant],
-    fontWeight: bold ? "bold" : "normal",
+    fontWeight: fontBoldMap[bold],
     color,
   };
 
