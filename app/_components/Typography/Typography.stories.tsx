@@ -28,3 +28,10 @@ export const LinkText: Story = {
     color: "red",
   },
 };
+
+export const BoldText: Story = {
+  args: {
+    color: "#039393",
+    bold: "bold"
+  }
+}

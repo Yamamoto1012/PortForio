@@ -42,11 +42,11 @@ const fontSizeMap: Record<TypographyVariant, string> = {
 };
 
 const fontBoldMap: Record<TypographyBold, string> = {
-  black: "font-black",
-  bold: "font-bold",
-  medium: "font-medium",
-  regular: "font-regular",
-  light: "font-light"
+  black: "900",
+  bold: "700",
+  medium: "500",
+  regular: "400",
+  light: "300"
 }
 
 export const Typography: React.FC<TypographyProps> = ({
