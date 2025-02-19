@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
+import { Header } from "./_features/Navigate/Header/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body
         className={zen_maru_gothic.className}
       >
+        <Header />
         {children}
       </body>
     </html>
