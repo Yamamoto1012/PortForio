@@ -27,7 +27,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <>
       <button onClick={onClick} className={buttonClasses}>
-        <Typography text={text} variant="button" color="white" bold />
+        <Typography text={text} variant="button" color="white" bold="bold" />
       </button>
     </>
   );
