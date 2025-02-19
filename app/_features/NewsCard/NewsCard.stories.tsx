@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { NewsCard } from "./NewsCard";
-import NewsImage from "../../../public/News/NewsImage.jpg";
+import NewsImage from "../../../public/News/NewsImage.png";
 
 const meta: Meta<typeof NewsCard> = {
   title: "features/NewsCard",

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import GithubIcon from "../../../public/Icon/Github.svg";
+import GithubIcon from "../../../public/SocialLinkIcon/Github.svg";
 import { SocialLinkButton } from "./SocialLinkButton";
 
 const meta: Meta<typeof SocialLinkButton> = {
