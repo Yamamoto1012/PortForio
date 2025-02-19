@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,6 +18,12 @@ export const metadata: Metadata = {
   description: "Yamamoto1o12のポートフォリオです",
 };
 
+const zen_maru_gothic = Zen_Maru_Gothic({
+  weight: ["300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+  display: "swap",
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={zen_maru_gothic.className}
       >
         {children}
       </body>
