@@ -2,7 +2,7 @@ export const Movie = () => {
   return (
     <div className="relative w-full h-[400px] md:h-[800px]">
       <video
-        src="/kirakira.mp4"
+        src="/top.mp4"
         autoPlay
         muted
         loop
