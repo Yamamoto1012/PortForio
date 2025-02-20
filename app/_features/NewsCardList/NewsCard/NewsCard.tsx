@@ -4,9 +4,11 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 import { Typography } from "@/app/_components/Typography/Typography";
+import { NEWS_CARD_TAGS } from "./constants";
+
 
 type NewsCardProps = {
-  tag: string;
+  tag: number;
   date: string;
   title: string;
   link: string;
@@ -23,7 +25,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({
   imageAlt = ""
 }) => {
   // カード全体のスタイル
-  const cardStyle = "w-[298px] h-[350px] shadow-2xl"
+  const cardStyle = "w-[298px] h-[350px] shadow-2xl bg-white"
   // 画像コンテナのスタイル
   const imageContainerStyle = "w-full h-[199px] relative";
   // カード下部のコンテンツ
@@ -47,7 +49,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({
         <div className={cardContentStyle}>
           <div className={tagDateContainerStyle}>
             <div className={tagStyle}>
-              <Typography text={tag} variant="caption" bold="bold" color="white" />
+              <Typography text={NEWS_CARD_TAGS[tag].label} variant="caption" bold="bold" color="white" />
             </div>
             <div className={dateStyle}>
               <Typography text={date} variant="card" color="black" />

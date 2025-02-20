@@ -12,7 +12,7 @@ type Story = StoryObj<typeof NewsCard>;
 
 export const Default: Story = {
   args: {
-    tag: "部活動",
+    tag: 0,
     date: '2018-04-04',
     title: 'aaaaaaaaaaaa',
     link: "",
