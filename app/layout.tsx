@@ -32,10 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body
-        className={zen_maru_gothic.className}
-      >
-        <Header />
+      <body className={`${zen_maru_gothic.className} h-screen w-screen`}>
+        <div className="pt-[35px] p-2 flex flex-col items-center">
+          <Header />
+        </div>
         {children}
       </body>
     </html>
