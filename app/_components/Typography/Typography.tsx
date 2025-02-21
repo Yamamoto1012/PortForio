@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 type TypographyVariant =
-  | "hero"
   | "title"
+  | "hero"
+  | "subtitle"
   | "section"
   | "button"
   | "profile"
@@ -29,8 +30,9 @@ type TypographyProps = {
 };
 
 const fontSizeMap: Record<TypographyVariant, string> = {
+  title: "64px",
   hero: "52px",
-  title: "48px",
+  subtitle: "48px",
   section: "40px",
   button: "32px",
   profile: "24px",
@@ -60,8 +62,9 @@ export const Typography: React.FC<TypographyProps> = ({
   const style = {
     fontSize: fontSizeMap[variant],
     fontWeight: fontBoldMap[bold],
-    color,
   };
+
+  const textStyle = `${color} ${className}`
 
   // リンクが存在する場合
   if (href) {
@@ -72,7 +75,7 @@ export const Typography: React.FC<TypographyProps> = ({
     );
   }
   return (
-    <p className={className} style={style}>
+    <p className={textStyle} style={style}>
       {text}
     </p>
   );
