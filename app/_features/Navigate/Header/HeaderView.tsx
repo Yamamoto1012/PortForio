@@ -19,8 +19,8 @@ export const HeaderView: React.FC<HeaderViewProps> = ({
   onToggleMenu,
   menuIcon
 }) => {
-  const headerContainerClass = "bg-white py-4 rounded-full shadow-2x";
-  const linkContainerClass = "flex space-x-8";
+  const headerContainerClass = "bg-white py-2 rounded-full w-full md:max-w-[1350px] shadow-2x";
+  const linkContainerClass = "flex flex-wrap justify-center md:justify-start gap-2 md:space-x-4";
 
   const createLinkItem = (href: string, text: string, index: number) => {
     const isActive = currentPathname === href;
@@ -50,7 +50,7 @@ export const HeaderView: React.FC<HeaderViewProps> = ({
 
   return (
     <header className={headerContainerClass}>
-      <div className="relative container mx-auto flex items-center justify-between px-2">
+      <div className="relative container mx-auto flex items-center justify-between px-2 sm:px-4 md:px-6">
         <Link href="/" className="flex-shrink-0">
           <Image src={Logo} alt="Logo" width={169} height={66} priority />
         </Link>
