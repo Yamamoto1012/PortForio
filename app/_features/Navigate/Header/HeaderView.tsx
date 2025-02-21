@@ -19,7 +19,7 @@ export const HeaderView: React.FC<HeaderViewProps> = ({
   onToggleMenu,
   menuIcon
 }) => {
-  const headerContainerClass = "bg-white py-2 rounded-full w-full md:max-w-[1350px] shadow-2x";
+  const headerContainerClass = "bg-white py-2 rounded-full w-full md:max-w-[1350px] shadow-2x fixed";
   const linkContainerClass = "flex flex-wrap justify-center md:justify-start gap-2 md:space-x-4";
 
   const createLinkItem = (href: string, text: string, index: number) => {
